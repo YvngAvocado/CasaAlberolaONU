@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>Casa Alberola — Presentación</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <!-- Font Awesome for icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- Background: YouTube video -->
+<div class="bg" aria-hidden="true">
+  <div class="video-bg">
+    <iframe
+      src="https://www.youtube.com/embed/HCNhaSZQaCQ?autoplay=1&mute=1&loop=1&playlist=HCNhaSZQaCQ&controls=0&modestbranding=1&rel=0&iv_load_policy=3&playsinline=1&fs=0&disablekb=1"
+      title="Casa Alberola"
+      frameborder="0"
+      allow="autoplay; encrypted-media; picture-in-picture"
+      allowfullscreen
+      referrerpolicy="origin"
+    ></iframe>
+  </div>
+  <div class="overlay"></div>
+</div>
+
+  <!-- Content wrapper with cards -->
+  <div class="content-wrap" aria-live="polite">
+    <article class="card" id="card" aria-roledescription="slide" aria-label="1 de N" style="opacity:0;transform:scale(.985)">
+      <!-- Card content is injected via script -->
+    </article>
+  </div>
+
+  <!-- Navigation arrows -->
+  <div class="nav">
+    <button class="btn" id="prev" aria-label="Anterior">
+      <svg viewBox="0 0 24 24"><path d="M15 19l-7-7 7-7"/></svg>
+    </button>
+    <button class="btn" id="next" aria-label="Siguiente">
+      <svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg>
+    </button>
+  </div>
+
+  <!-- Dot indicators (filled in via JS) -->
+  <div class="dots" role="tablist" aria-label="Tarjetas"></div>
+
+  <!-- JS libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
+  <!-- Custom script -->
+  <script src="script.js"></script>
+</body>
+</html>
