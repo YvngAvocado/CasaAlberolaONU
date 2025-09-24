@@ -230,11 +230,34 @@ langDropdown.innerHTML = `
 `;
 document.body.appendChild(langDropdown);
 
+const langFlags = {
+  es: '🇪🇸',
+  en: '🇬🇧',
+  fr: '🇫🇷',
+  de: '🇩🇪',
+  ar: '🇸🇦'
+};
+const langNames = {
+  es: 'ESPAÑOL',
+  en: 'ENGLISH',
+  fr: 'FRANÇAIS',
+  de: 'DEUTSCH',
+  ar: 'العربية'
+};
+langBtn.innerHTML = `${langFlags.es} <span style="margin-left:0.5em; font-size:0.85em;">${langNames.es}</span>`;
+
+langDropdown.innerHTML = `
+  <li role="menuitem" tabindex="0" data-lang="es">${langFlags.es} <span style="font-size:0.85em;">${langNames.es}</span></li>
+  <li role="menuitem" tabindex="0" data-lang="en">${langFlags.en} <span style="font-size:0.85em;">${langNames.en}</span></li>
+  <li role="menuitem" tabindex="0" data-lang="fr">${langFlags.fr} <span style="font-size:0.85em;">${langNames.fr}</span></li>
+  <li role="menuitem" tabindex="0" data-lang="de">${langFlags.de} <span style="font-size:0.85em;">${langNames.de}</span></li>
+  <li role="menuitem" tabindex="0" data-lang="ar">${langFlags.ar} <span style="font-size:0.85em;">${langNames.ar}</span></li>
+`;
+
 let currentLang = 'es';
 function updateLangBtn() {
-  let label = { es: 'ESPAÑOL', en: 'ENGLISH', fr: 'FRANÇAIS', de: 'DEUTSCH' };
-  langBtn.innerHTML = `🌐 <span style="margin-left:0.5em; font-size:0.95em;">${label[currentLang]}</span>`;
-  langBtn.setAttribute('aria-label', `Cambiar idioma (${label[currentLang]})`);
+  langBtn.innerHTML = `${langFlags[currentLang]} <span style='margin-left:0.5em; font-size:0.85em;'>${langNames[currentLang]}</span>`;
+  langBtn.setAttribute('aria-label', `Cambiar idioma (${langNames[currentLang]})`);
 }
 langBtn.onclick = function() {
   langDropdown.style.display = langDropdown.style.display === 'none' ? 'block' : 'none';
@@ -386,7 +409,18 @@ const translations = {
     'Parque Natural de las Salinas de Santa Pola (Alicante)': 'Salinas de Santa Pola Natural Park (Alicante)',
     'Ciudad de las Artes y las Ciencias (Valencia)': 'City of Arts and Sciences (Valencia)',
     'Castillo de Santa Bárbara (Alicante)': 'Santa Bárbara Castle (Alicante)',
-    'La Lonja de la Seda (Valencia)': 'Silk Exchange (Valencia)'
+    'La Lonja de la Seda (Valencia)': 'Silk Exchange (Valencia)',
+    // ODS radial items
+    'Casa Alberola apuesta por la igualdad de género: gran parte de la dirección está formada por mujeres. Apostamos por la conciliación familiar y ajustamos los horarios a todos los miembros del equipo.': 'Casa Alberola supports gender equality: much of the management is made up of women. We support work-life balance and adjust schedules for all team members.',
+    'Desde 2019 apostamos por eficiencia energética: instalaciones con aerotermia, limitadores de aire acondicionado y calefacción, y formación al equipo.': 'Since 2019, we have focused on energy efficiency: facilities with aerothermal technology, air conditioning and heating limiters, and team training.',
+    'Fomentamos el bienestar laboral: beneficios especiales, descuentos en hoteles, comidas de equipo e incentivos para todos los trabajadores.': 'We promote workplace well-being: special benefits, hotel discounts, team meals, and incentives for all employees.',
+    'Más del 90% del equipo son mujeres y es multicultural.': 'More than 90% of the team are women and it is multicultural.',
+    'Cuidamos Alicante y fomentamos transporte sostenible: uso de bicicletas, transporte público y recorridos a pie. Potenciamos el aspecto cultural de la ciudad y provincia.': 'We care for Alicante and promote sustainable transport: use of bicycles, public transport, and walking tours. We enhance the cultural aspect of the city and province.',
+    'Ejemplo de producción y consumo responsable: platos de elaboración al momento para evitar desperdicio y uso de "Too Good To Go" para reducirlo aún más.': 'Example of responsible production and consumption: freshly prepared dishes to avoid waste and use of "Too Good To Go" to reduce it even further.',
+    'Calculamos nuestra huella de carbono para ser conscientes del impacto en el ecosistema y trabajamos para reducirla.': 'We calculate our carbon footprint to be aware of the impact on the ecosystem and work to reduce it.',
+    'Proteger los océanos es prioridad: ayudamos en el cuidado y formamos parte de una región con el mayor número de banderas azules por la calidad del agua.': 'Protecting the oceans is a priority: we help with care and are part of a region with the highest number of blue flags for water quality.',
+    'El cuidado de los ecosistemas es esencial: recomendamos siempre turismo sostenible con el menor impacto posible.': 'Caring for ecosystems is essential: we always recommend sustainable tourism with the least possible impact.',
+    'Buscamos proveedores y colaboramos con asociaciones locales que comparten nuestra filosofía para cumplir estos objetivos juntos.': 'We seek suppliers and collaborate with local associations that share our philosophy to achieve these goals together.'
   },
   fr: {
     'Bienvenida & Filosofía': 'Bienvenue & Philosophie',
@@ -439,7 +473,18 @@ const translations = {
     'Barrio de Santa Cruz': "Quartier de Santa Cruz",
     'Explanada de España': "Explanade d'Espagne",
     'Plaza de los Luceros': "Place des Luceros",
-    'Puerto de Alicante': "Port d'Alicante"
+    'Puerto de Alicante': "Port d'Alicante",
+    // ODS radial items
+    'Casa Alberola apuesta por la igualdad de género: gran parte de la dirección está formada por mujeres. Apostamos por la conciliación familiar y ajustamos los horarios a todos los miembros del equipo.': "Casa Alberola soutient l'égalité des sexes : une grande partie de la direction est composée de femmes. Nous favorisons la conciliation familiale et adaptons les horaires à tous les membres de l'équipe.",
+    'Desde 2019 apostamos por eficiencia energética: instalaciones con aerotermia, limitadores de aire acondicionado y calefacción, y formación al equipo.': "Depuis 2019, nous misons sur l'efficacité énergétique : installations avec aérothermie, limiteurs de climatisation et de chauffage, et formation de l'équipe.",
+    'Fomentamos el bienestar laboral: beneficios especiales, descuentos en hoteles, comidas de equipo e incentivos para todos los trabajadores.': "Nous favorisons le bien-être au travail : avantages spéciaux, réductions dans les hôtels, repas d'équipe et incitations pour tous les employés.",
+    'Más del 90% del equipo son mujeres y es multicultural.': "Plus de 90 % de l'équipe sont des femmes et elle est multiculturelle.",
+    'Cuidamos Alicante y fomentamos transporte sostenible: uso de bicicletas, transporte público y recorridos a pie. Potenciamos el aspecto cultural de la ciudad y provincia.': "Nous prenons soin d'Alicante et favorisons le transport durable : utilisation de vélos, transports publics et promenades à pied. Nous valorisons l'aspect culturel de la ville et de la province.",
+    'Ejemplo de producción y consumo responsable: platos de elaboración al momento para evitar desperdicio y uso de "Too Good To Go" para reducirlo aún más.': "Exemple de production et de consommation responsable : plats préparés à la demande pour éviter le gaspillage et utilisation de 'Too Good To Go' pour le réduire encore plus.",
+    'Calculamos nuestra huella de carbono para ser conscientes del impacto en el ecosistema y trabajamos para reducirla.': "Nous calculons notre empreinte carbone pour être conscients de l'impact sur l'écosystème et travaillons à la réduire.",
+    'Proteger los océanos es prioridad: ayudamos en el cuidado y formamos parte de una región con el mayor número de banderas azules por la calidad del agua.': "Protéger les océans est une priorité : nous aidons à leur préservation et faisons partie d'une région avec le plus grand nombre de pavillons bleus pour la qualité de l'eau.",
+    'El cuidado de los ecosistemas es esencial: recomendamos siempre turismo sostenible con el menor impacto posible.': "La préservation des écosystèmes est essentielle : nous recommandons toujours un tourisme durable avec le moins d'impact possible.",
+    'Buscamos proveedores y colaboramos con asociaciones locales que comparten nuestra filosofía para cumplir estos objetivos juntos.': "Nous recherchons des fournisseurs et collaborons avec des associations locales qui partagent notre philosophie pour atteindre ces objectifs ensemble."
   },
   de: {
     'Bienvenida & Filosofía': 'Willkommen & Philosophie',
@@ -492,7 +537,95 @@ const translations = {
     'Barrio de Santa Cruz': "Stadtteil Santa Cruz",
     'Explanada de España': "Explanada de España",
     'Plaza de los Luceros': "Platz der Luceros",
-    'Puerto de Alicante': "Hafen von Alicante"
+    'Puerto de Alicante': "Hafen von Alicante",
+    'Lucentum': "Lucentum",
+    'Playa de San Juan': "Strand von San Juan",
+    'Playa del Postiguet': "Strand von Postiguet",
+    'Playa de Tabarca': "Strand von Tabarca",
+    'Playa de Urbanova': "Strand von Urbanova",
+    // ODS radial items
+    'Casa Alberola apuesta por la igualdad de género: gran parte de la dirección está formada por mujeres. Apostamos por la conciliación familiar y ajustamos los horarios a todos los miembros del equipo.': 'Casa Alberola setzt sich für Gleichstellung der Geschlechter ein: Ein Großteil der Leitung besteht aus Frauen. Wir setzen auf Vereinbarkeit von Familie und Beruf und passen die Arbeitszeiten für alle Teammitglieder an.',
+    'Desde 2019 apostamos por eficiencia energética: instalaciones con aerotermia, limitadores de aire acondicionado y calefacción, y formación al equipo.': 'Seit 2019 setzen wir auf Energieeffizienz: Anlagen mit Aerothermie, Begrenzungen für Klimaanlage und Heizung sowie Schulungen für das Team.',
+    'Fomentamos el bienestar laboral: beneficios especiales, descuentos en hoteles, comidas de equipo e incentivos para todos los trabajadores.': 'Wir fördern das Wohlbefinden am Arbeitsplatz: besondere Vorteile, Rabatte in Hotels, Teamessen und Anreize für alle Mitarbeitenden.',
+    'Más del 90% del equipo son mujeres y es multicultural.': 'Mehr als 90 % des Teams sind Frauen und es ist multikulturell.',
+    'Cuidamos Alicante y fomentamos transporte sostenible: uso de bicicletas, transporte público y recorridos a pie. Potenciamos el aspecto cultural de la ciudad y provincia.': 'Wir kümmern uns um Alicante und fördern nachhaltigen Transport: Nutzung von Fahrrädern, öffentlichen Verkehrsmitteln und Spaziergängen. Wir stärken den kulturellen Aspekt der Stadt und Provinz.',
+    'Ejemplo de producción y consumo responsable: platos de elaboración al momento para evitar desperdicio y uso de "Too Good To Go" para reducirlo aún más.': 'Beispiel für verantwortungsvolle Produktion und Konsum: frisch zubereitete Gerichte zur Vermeidung von Verschwendung und Nutzung von "Too Good To Go" zur weiteren Reduzierung.',
+    'Calculamos nuestra huella de carbono para ser conscientes del impacto en el ecosistema y trabajamos para reducirla.': 'Wir berechnen unseren CO₂-Fußabdruck, um uns der Auswirkungen auf das Ökosystem bewusst zu sein und arbeiten daran, ihn zu reduzieren.',
+    'Proteger los océanos es prioridad: ayudamos en el cuidado y formamos parte de una región con el mayor número de banderas azules por la calidad del agua.': 'Der Schutz der Ozeane hat Priorität: Wir helfen bei der Pflege und sind Teil einer Region mit der höchsten Anzahl an Blauen Flaggen für Wasserqualität.',
+    'El cuidado de los ecosistemas es esencial: recomendamos siempre turismo sostenible con el menor impacto posible.': 'Die Pflege der Ökosysteme ist essenziell: Wir empfehlen immer nachhaltigen Tourismus mit möglichst geringer Auswirkung.',
+    'Buscamos proveedores y colaboramos con asociaciones locales que comparten nuestra filosofía para cumplir estos objetivos juntos.': 'Wir suchen Lieferanten und arbeiten mit lokalen Verbänden zusammen, die unsere Philosophie teilen, um diese Ziele gemeinsam zu erreichen.'
+  },
+  ar: {
+    'Bienvenida & Filosofía': 'الترحيب والفلسفة',
+    'Somos un hotel independiente en Alicante. Nuestro tamaño es una ventaja: nos permite conocer la realidad del turismo y poner a las personas en el centro.': 'نحن فندق مستقل في أليكانتي. حجمنا ميزة: يسمح لنا بفهم واقع السياحة ووضع الناس في المركز.',
+    'Conocemos la realidad del turismo en el dia a dia, de forma inmediata.': 'نحن نعرف واقع السياحة يومياً وبشكل فوري.',
+    'Turismo como fuerza de transformación social y cultural.': 'السياحة كقوة للتحول الاجتماعي والثقافي.',
+    'Gestión basada en arraigo local y responsabilidad ambiental.': 'إدارة قائمة على الجذور المحلية والمسؤولية البيئية.',
+    '90 % del equipo: mujeres de diversas culturas.': '90٪ من الفريق: نساء من ثقافات متنوعة.',
+    'VALORES': 'القيم',
+    'Multiculturalidad': 'التعددية الثقافية',
+    'Alicante es un referente de multiculturalidad, con un 25% de su población de diversas nacionalidades. La antigua Lucentum fue un cruce de culturas cartaginés, Árabe y Romana.': 'أليكانتي مثال للتعددية الثقافية، حيث أن 25٪ من سكانها من جنسيات مختلفة. كانت لوكنتوم القديمة ملتقى للثقافات القرطاجية والعربية والرومانية.',
+    'Compromiso Empresarial': 'الالتزام المؤسسي',
+    'Nuestra gestión se centra en la sostenibilidad، la igualdad de género، la conciliación laboral، el apoyo a la economía local y la reducción del impacto ambiental، utilizando tecnología específica para la eficiencia energética.': 'تركز إدارتنا على الاستدامة والمساواة بين الجنسين والتوفيق بين العمل والحياة ودعم الاقتصاد المحلي وتقليل التأثير البيئي باستخدام تقنيات خاصة للكفاءة الطاقية.',
+    'El Turismo como Diplomacia': 'السياحة كدبلوماسية',
+    'Creemos que nuestra voz puede enriquecer este foro desde la perspectiva de quienes conocen el turismo en su realidad más humana y cotidiana. El turismo es، en esencia، la forma más auténtica de diplomacia.': 'نعتقد أن صوتنا يمكن أن يثري هذا المنتدى من منظور من يعرف السياحة في واقعها الإنساني واليومي. السياحة هي في جوهرها أكثر أشكال الدبلوماسية أصالة.',
+    '¿Por qué elegirnos?': 'لماذا تختارنا؟',
+    'Elegirnos es apostar por un modelo inclusivo y sostenible.': 'اختيارنا هو الرهان على نموذج شامل ومستدام.',
+    'Liderazgo femenino y diversidad en todo el proyecto.': 'قيادة نسائية وتنوع في جميع جوانب المشروع.',
+    'Ahorro energético y reducción de huella de carbono (70 % menos que la media de 4★).': 'توفير الطاقة وتقليل البصمة الكربونية (أقل بنسبة 70٪ من متوسط الفنادق ذات الأربع نجوم).',
+    'Certificaciones: ISO 1401, Ecostars, Green Key y Bioscore.': 'شهادات: ISO 1401، إيكوستارز، المفتاح الأخضر، وبايوسكور.',
+    'Destino conectado: 4º aeropuerto de España y puerto base de cruceros.': 'وجهة متصلة: رابع أكبر مطار في إسبانيا وميناء رئيسي للرحلات البحرية.',
+    'Alicante: modelo de ciudad': 'أليكانتي: نموذج المدينة',
+    'Alicante es un ecosistema donde la conectividad y la cultura conviven con un entorno único.': 'أليكانتي نظام بيئي حيث تتعايش الاتصال والثقافة مع بيئة فريدة.',
+    '4º aeropuerto de España, en el top 30 mundial.': 'رابع أكبر مطار في إسبانيا، من بين أفضل 30 مطاراً في العالم.',
+    'Puerto base de cruceros en el Mediterráneo.': 'ميناء رئيسي للرحلات البحرية في البحر المتوسط.',
+    'Hogueras de San Juan: fiesta de Interés Turístico Internacional.': 'مهرجان سان خوان: احتفال ذو اهتمام سياحي دولي.',
+    'Gastronomía mediterránea reconocida por la UNESCO.': 'المطبخ المتوسطي معترف به من قبل اليونسكو.',
+    'Capital de la gastronomía de España 2025': 'عاصمة فن الطهو في إسبانيا 2025',
+    'Compromiso Ambiental': 'الالتزام البيئي',
+    'Nuestro compromiso ambiental se mide con hechos y certificaciones.': 'يتم قياس التزامنا البيئي بالأفعال والشهادات.',
+    'Sistema de gestión ambiental ISO 14001.': 'نظام إدارة بيئية ISO 14001.',
+    'Huella de carbono un 70 % inferior a la media 4★.': 'بصمة كربونية أقل بنسبة 70٪ من متوسط الفنادق ذات الأربع نجوم.',
+    'Eficiencia energética، reducción de plásticos y movilidad sostenible.': 'كفاءة الطاقة، تقليل البلاستيك والتنقل المستدام.',
+    'Alineación con los Objetivos de Desarrollo Sostenible (ODS).': 'الالتزام بأهداف التنمية المستدامة (SDGs).',
+    'ODS prioritarios (2023–2028)': 'الأهداف ذات الأولوية (2023–2028)',
+    'Basamos nuestra estrategia en los ODS de Naciones Unidas. Estos son los prioritarios a corto y medio plazo y cómo actuamos en cada uno.': 'نحن نبني استراتيجيتنا على أهداف الأمم المتحدة للتنمية المستدامة. هذه هي الأولويات على المدى القصير والمتوسط وكيف نتصرف في كل منها.',
+    'Foco realista a corto/medio plazo sin perder de vista los 17 ODS.': 'تركيز واقعي على المدى القصير والمتوسط دون فقدان رؤية جميع الأهداف السبعة عشر.',
+    'Playas de Bandera Azul': 'شواطئ العلم الأزرق',
+    'Parques Naturales': 'الحدائق الطبيعية',
+    'Puntos de Interés': 'نقاط الاهتمام',
+    'Turismo Responsable': 'السياحة المسؤولة',
+    'Proponemos un turismo responsable con consejos prácticos para visitantes:': 'نقترح سياحة مسؤولة مع نصائح عملية للزوار:',
+    'Planifica con antelación para evitar imprevistos.': 'خطط مسبقاً لتجنب المفاجآت.',
+    'Transporte público، bici o caminar cuando sea viable.': 'استخدم وسائل النقل العامة أو الدراجة أو المشي عندما يكون ذلك ممكناً.',
+    'Alojamientos sostenibles y herramientas digitales.': 'إقامة مستدامة وأدوات رقمية.',
+    'No derroches agua ni energía; cuida la naturaleza.': 'لا تهدر الماء أو الطاقة؛ اعتنِ بالطبيعة.',
+    'Compra local y minimiza residuos reutilizando.': 'اشترِ محلياً وقلل النفايات بإعادة الاستخدام.',
+    'They say it': 'قالوا عنا',
+    'FOUNDER': 'المؤسس',
+    'FOUNDER&CEO': 'المؤسس والمدير التنفيذي',
+    'DIRECCION': 'الإدارة',
+    'Galería Comunidad Valenciana': 'معرض مجتمع فالنسيا',
+    'Barrio de Santa Cruz': 'حي سانتا كروز',
+    'Explanada de España': 'ممشى إسبانيا',
+    'Plaza de los Luceros': 'ساحة لوس لوسيروس',
+    'Puerto de Alicante': 'ميناء أليكانتي',
+    'Lucentum': 'لوكنتوم',
+    'Playa de San Juan': 'شاطئ سان خوان',
+    'Playa del Postiguet': 'شاطئ بوستيغيت',
+    'Playa de Tabarca': 'شاطئ تاباركا',
+    'Playa de Urbanova': 'شاطئ أوربانوفا',
+    // ODS radial items
+    'Casa Alberola apuesta por la igualdad de género: gran parte de la dirección está formada por mujeres. Apostamos por la conciliación familiar y ajustamos los horarios a todos los miembros del equipo.': 'كازا ألبيرولا تدعم المساواة بين الجنسين: معظم الإدارة من النساء. نحن ندعم التوفيق بين العمل والأسرة ونضبط الجداول الزمنية لجميع أعضاء الفريق.',
+    'Desde 2019 apostamos por eficiencia energética: instalaciones con aerotermia, limitadores de aire acondicionado y calefacción, y formación al equipo.': 'منذ عام 2019، نركز على كفاءة الطاقة: منشآت بتقنية الهواء الحراري، محددات التكييف والتدفئة، وتدريب الفريق.',
+    'Fomentamos el bienestar laboral: beneficios especiales، descuentos en hoteles، comidas de equipo e incentivos para todos los trabajadores.': 'نحن نشجع الرفاهية في العمل: مزايا خاصة، خصومات في الفنادق، وجبات جماعية وحوافز لجميع الموظفين.',
+    'Más del 90% del equipo son mujeres y es multicultural.': 'أكثر من 90٪ من الفريق من النساء وهو متعدد الثقافات.',
+    'Cuidamos Alicante y fomentamos transporte sostenible: uso de bicicletas، transporte público y recorridos a pie. Potenciamos el aspecto cultural de la ciudad y provincia.': 'نهتم بأليكانتي ونعزز النقل المستدام: استخدام الدراجات، النقل العام والمشي. نعزز الجانب الثقافي للمدينة والمقاطعة.',
+    'Ejemplo de producción y consumo responsable: platos de elaboración al momento para evitar desperdicio y uso de "Too Good To Go" para reducirlo aún más.': 'مثال على الإنتاج والاستهلاك المسؤول: أطباق تُحضّر عند الطلب لتجنب الهدر واستخدام "تو جود تو جو" لتقليله أكثر.',
+    'Calculamos nuestra huella de carbono para ser conscientes del impacto en el ecosistema y trabajamos para reducirla.': 'نحسب بصمتنا الكربونية لندرك تأثيرنا على النظام البيئي ونعمل على تقليلها.',
+    'Proteger los océanos es prioridad: ayudamos en el cuidado y formamos parte de una región con el mayor número de banderas azules por la calidad del الماء.': 'حماية المحيطات أولوية: نساعد في العناية وننتمي إلى منطقة بها أكبر عدد من الأعلام الزرقاء لجودة المياه.',
+    'El cuidado de los ecosistemas es esencial: recomendamos siempre turismo sostenible con el menor impacto posible.': 'العناية بالنظم البيئية أمر أساسي: نوصي دائماً بالسياحة المستدامة بأقل تأثير ممكن.',
+    'Buscamos proveedores y colaboramos con asociaciones locales que comparten nuestra filosofía para cumplir estos objetivos juntos.': 'نبحث عن موردين ونتعاون مع جمعيات محلية تشاركنا فلسفتنا لتحقيق هذه الأهداف معاً.'
   }
 };
 
@@ -504,17 +637,15 @@ function translateCard(card, lang) {
   const t = translations[lang];
   // Deep clone card
   const c = JSON.parse(JSON.stringify(card));
-  if (c.title) c.title = t[c.title] || c.title;
+  // Always use the original image path from the Spanish card
+  if (card.image) c.image = card.image;
+  if (c.title && t[c.title]) c.title = t[c.title];
   if (c.paragraphs) c.paragraphs = c.paragraphs.map(p => t[p] || p);
-  if (c.list) c.list = c.list.map(li => ({ ...li, text: t[li.text] || li.text }));
-  if (c.valores) c.valores = c.valores.map(v => ({ ...v, heading: t[v.heading] || v.heading, text: t[v.text] || v.text }));
-  if (c.team) c.team = c.team.map(m => ({ ...m, role: t[m.role] || m.role, name: t[m.name] || m.name }));
-  if (c.gallery) c.gallery = c.gallery.map(g => ({
-    ...g,
-    section: t[g.section] || g.section,
-    images: g.images.map(im => ({ ...im, title: t[im.title] || im.title }))
-  }));
-  if (c.radial) c.radial = c.radial.map(r => ({ ...r, title: t[r.title] || r.title }));
+  if (c.list) c.list = c.list.map(l => t[l] || l);
+  if (c.valores) c.valores = c.valores.map(v => t[v] || v);
+  if (c.team) c.team = c.team.map(v => t[v] || v);
+  if (c.gallery) c.gallery = c.gallery.map(g => t[g] || g);
+  if (c.radial) c.radial = c.radial.map(r => t[r] || r);
   return c;
 }
 
@@ -556,8 +687,11 @@ function positionRadial() {
     items.forEach(e => e.classList.remove('active'));
     items[idx].classList.add('active');
     if (infoBox) {
+      // Use translated text for info box
+      const desc = items[idx].getAttribute('data-desc');
+      const translatedDesc = translations[currentLang] && translations[currentLang][desc] ? translations[currentLang][desc] : desc;
       infoBox.style.display = 'flex';
-      infoBox.innerHTML = `<div class='radial-info-content'>${items[idx].getAttribute('data-desc')}</div>`;
+      infoBox.innerHTML = `<div class='radial-info-content'>${translatedDesc}</div>`;
     }
     activeIdx = idx;
   }
@@ -704,13 +838,25 @@ function renderCard(i, overrideCard) {
       // Use custom images for specific cards
       let imgSrc = '';
       if (c.title === 'Turismo Responsable') {
-        imgSrc = 'AlicanteCentro.jpg'; // Use the first provided image
+        imgSrc = 'Turismo.jpeg';
       } else if (c.title === 'Alicante: modelo de ciudad') {
-        imgSrc = 'AlicanteNoche.jpg'; // Use the second provided image
+        imgSrc = 'AlicanteCentro.jpg';
       } else {
-        imgSrc = 'https://via.placeholder.com/600x400/cccccc/000000?text=Placeholder';
+        imgSrc = 'AlicanteCentro.jpg';
       }
       html += `<img class="card-img" src="${imgSrc}" alt="${c.alt}">`;
+    }
+    // Remove duplicate image for Turismo Responsable and Alicante: modelo de ciudad
+    let imgSrc = c.image;
+    if (c.title === 'Alicante: modelo de ciudad' || c.title === translations['es']['Alicante: modelo de ciudad']) {
+      imgSrc = 'AlicanteCentro.jpg';
+    }
+    if (c.title === 'Turismo Responsable' || c.title === translations['es']['Turismo Responsable']) {
+      imgSrc = 'Turismo.jpeg';
+    }
+    // Only add image if not already added above
+    if (!c.alt && imgSrc) {
+      html += `<img src="${imgSrc}" alt="${c.title}" class="card-img">`;
     }
     html += '</div>';
     html += '</div>';
