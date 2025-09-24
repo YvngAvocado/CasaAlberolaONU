@@ -18,17 +18,17 @@ const cards = [
     title: 'VALORES',
     valores: [
       {
-        img: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80',
+        img: 'Multicultural.jpeg',
         heading: 'Multiculturalidad',
         text: 'Alicante es un referente de multiculturalidad, con un 25% de su población de diversas nacionalidades. La antigua Lucentum fue un cruce de culturas cartaginés, Árabe y Romana.'
       },
       {
-        img: 'https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80',
+        img: 'Compromiso.jpeg',
         heading: 'Compromiso Empresarial',
         text: 'Nuestra gestión se centra en la sostenibilidad, la igualdad de género, la conciliación laboral, el apoyo a la economía local y la reducción del impacto ambiental, utilizando tecnología específica para la eficiencia energética.'
       },
       {
-        img: 'https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80',
+        img: 'Turismo.jpeg',
         heading: 'El Turismo como Diplomacia',
         text: 'Creemos que nuestra voz puede enriquecer este foro desde la perspectiva de quienes conocen el turismo en su realidad más humana y cotidiana. El turismo es, en esencia, la forma más auténtica de diplomacia.'
       }
@@ -130,17 +130,17 @@ const cards = [
     title: 'They say it',
     team: [
       {
-        img: 'https://i.imgur.com/0Q9QZpA.jpg',
+        img: 'papa.jpg',
         role: 'FOUNDER',
         name: 'Fco.Javier Gutierrez'
       },
       {
-        img: 'https://i.imgur.com/1Q9QZpB.jpg',
+        img: 'mama.png',
         role: 'FOUNDER&CEO',
         name: 'Asuncion Ujeda'
       },
       {
-        img: 'https://i.imgur.com/2Q9QZpC.jpg',
+        img: 'sandra.jpg',
         role: 'DIRECCION',
         name: 'Alejandra Gutierrez'
       }
@@ -155,7 +155,8 @@ const cards = [
           { src: 'barrio-santa-cruz-que-ver-en-alicante.jpg', title: 'Barrio de Santa Cruz' },
           { src: 'explanada-que-visitar-en-alicante.jpg', title: 'Explanada de España' },
           { src: 'plaza-luceros-que-ver-en-alicante.jpg', title: 'Plaza de los Luceros' },
-          { src: 'puerto-alicante.jpg', title: 'Puerto de Alicante' }
+          { src: 'puerto-alicante.jpg', title: 'Puerto de Alicante' },
+          { src: 'Lucentum.jpg', title: 'Lucentum', style: { objectFit: 'cover', aspectRatio: '1.5/1' } } // Ensure consistent layout
         ]
       },
       {
@@ -400,7 +401,7 @@ const translations = {
     'Compromiso Empresarial': "Engagement d'entreprise",
     'Nuestra gestión se centra en la sostenibilidad, la igualdad de género, la conciliación laboral, el apoyo a la economía local y la reducción del impacto ambiental, utilizando tecnología específica para la eficiencia energética.': "Notre gestion est axée sur la durabilité, l'égalité des sexes, la conciliation travail-vie, le soutien à l'économie locale et la réduction de l'impact environnemental, en utilisant des technologies spécifiques pour l'efficacité énergétique.",
     'El Turismo como Diplomacia': 'Le tourisme comme diplomatie',
-    'Creemos que nuestra voz puede enriquecer este foro desde la perspectiva de quienes conocen el turismo en su realidad más humana y cotidiana. El turismo es, en esencia, la forma más auténtica de diplomatie.': "Nous pensons que notre voix peut enrichir ce forum du point de vue de ceux qui connaissent le tourisme dans sa réalité la plus humaine et quotidienne. Le tourisme est, en essence, la forme la plus authentique de diplomatie.",
+    'Creemos que nuestra voz puede enriquecer este foro desde la perspectiva de quienes conocen el turismo en su realidad más humana y cotidiana. El turismo es, en esencia, la forma más auténtica de diplomacia.': "Nous pensons que notre voix peut enrichir ce forum du point de vue de ceux qui connaissent le tourisme dans sa réalité la plus humaine et quotidienne. Le tourisme est, en essence, la forme la plus authentique de diplomatie.",
     '¿Por qué elegirnos?': 'Pourquoi nous choisir ?',
     'Elegirnos es apostar por un modelo inclusivo y sostenible.': "Nous choisir, c'est miser sur un modèle inclusif et durable.",
     'Liderazgo femenino y diversidad en todo el proyecto.': "Leadership féminin et diversité dans tout le projet.",
@@ -642,10 +643,19 @@ function renderCard(i, overrideCard) {
       html += `<h3 class="gallery-section-title">${section.section}</h3>`;
       html += `<div class="gallery-row">`;
       section.images.forEach((imgObj, idx) => {
-        html += `<div class="gallery-img-wrap" tabindex="0" data-img="${imgObj.src}" data-title="${imgObj.title}" onclick="window.enlargeGalleryImg && window.enlargeGalleryImg(event)">
-          <div class="gallery-img-title">${imgObj.title}</div>
-          <img src="${imgObj.src}" alt="${imgObj.title}" class="gallery-img" />
-        </div>`;
+        // For 'Alicante imprescindible' and 'Playas de Bandera Azul' sections, apply consistent style to all images
+        let style = '';
+        if (section.section === 'Alicante imprescindible' || section.section === 'Playas de Bandera Azul') {
+          style = 'object-fit:cover;aspect-ratio:1.5/1;';
+        } else if (imgObj.style) {
+          style = Object.entries(imgObj.style).map(([k,v]) => `${k}:${v};`).join('');
+        }
+        html += `
+          <div class="gallery-img-wrap">
+            <img src="${imgObj.src}" alt="${imgObj.title}" class="gallery-img" style="${style}" />
+            <div class="gallery-img-title">${imgObj.title}</div>
+          </div>
+        `;
       });
       html += `</div></div>`;
     });
@@ -691,7 +701,16 @@ function renderCard(i, overrideCard) {
         </div>`;
       }
     } else if (c.alt) {
-      html += `<img class="card-img" src="https://via.placeholder.com/600x400/cccccc/000000?text=Placeholder" alt="${c.alt}">`;
+      // Use custom images for specific cards
+      let imgSrc = '';
+      if (c.title === 'Turismo Responsable') {
+        imgSrc = 'AlicanteCentro.jpg'; // Use the first provided image
+      } else if (c.title === 'Alicante: modelo de ciudad') {
+        imgSrc = 'AlicanteNoche.jpg'; // Use the second provided image
+      } else {
+        imgSrc = 'https://via.placeholder.com/600x400/cccccc/000000?text=Placeholder';
+      }
+      html += `<img class="card-img" src="${imgSrc}" alt="${c.alt}">`;
     }
     html += '</div>';
     html += '</div>';
@@ -863,3 +882,19 @@ window.closeGalleryModal = function() {
   let modal = document.getElementById('gallery-modal');
   if (modal) modal.style.display = 'none';
 };
+
+// === YOUTUBE AUTOPLAY FALLBACK ===
+(function(){
+  const iframe = document.querySelector('.video-bg iframe');
+  if (!iframe) return;
+  let started = false;
+  function restartVideo() {
+    if (started) return;
+    started = true;
+    // Reload the iframe with autoplay and mute
+    iframe.src = 'https://www.youtube.com/embed/HCNhaSZQaCQ?autoplay=1&mute=1&loop=1&playlist=HCNhaSZQaCQ&controls=0&modestbranding=1&rel=0&iv_load_policy=3&playsinline=1&fs=0&disablekb=1';
+  }
+  ['click','keydown','touchstart'].forEach(evt => {
+    window.addEventListener(evt, restartVideo, { once: true });
+  });
+})();
