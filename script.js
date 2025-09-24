@@ -898,3 +898,36 @@ window.closeGalleryModal = function() {
     window.addEventListener(evt, restartVideo, { once: true });
   });
 })();
+
+// === BACKGROUND MUSIC =======================================================
+const bgAudio = document.createElement('audio');
+bgAudio.src = 'background.mp3';
+bgAudio.loop = true;
+bgAudio.autoplay = true;
+bgAudio.volume = 0.2;
+bgAudio.style.display = 'none';
+document.body.appendChild(bgAudio);
+
+const muteBtn = document.createElement('button');
+muteBtn.id = 'mute-btn';
+muteBtn.innerHTML = '🔈';
+muteBtn.style.position = 'fixed';
+muteBtn.style.bottom = '32px';
+muteBtn.style.right = '32px';
+muteBtn.style.zIndex = '1002';
+muteBtn.style.padding = '0.7em 1.3em';
+muteBtn.style.fontSize = '1.1rem';
+muteBtn.style.borderRadius = '2em';
+muteBtn.style.border = 'none';
+muteBtn.style.background = 'var(--gold)';
+muteBtn.style.color = '#222';
+muteBtn.style.fontWeight = '700';
+muteBtn.style.cursor = 'pointer';
+muteBtn.style.display = 'flex';
+muteBtn.style.alignItems = 'center';
+document.body.appendChild(muteBtn);
+
+muteBtn.onclick = function() {
+  bgAudio.muted = !bgAudio.muted;
+  muteBtn.innerHTML = bgAudio.muted ? '🔇' : '🔈';
+};
