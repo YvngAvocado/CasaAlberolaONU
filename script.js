@@ -566,9 +566,9 @@ const translations = {
     'Multiculturalidad': 'التعددية الثقافية',
     'Alicante es un referente de multiculturalidad, con un 25% de su población de diversas nacionalidades. La antigua Lucentum fue un cruce de culturas cartaginés, Árabe y Romana.': 'أليكانتي مثال للتعددية الثقافية، حيث أن 25٪ من سكانها من جنسيات مختلفة. كانت لوكنتوم القديمة ملتقى للثقافات القرطاجية والعربية والرومانية.',
     'Compromiso Empresarial': 'الالتزام المؤسسي',
-    'Nuestra gestión se centra en la sostenibilidad، la igualdad de género، la conciliación laboral، el apoyo a la economía local y la reducción del impacto ambiental، utilizando tecnología específica para la eficiencia energética.': 'تركز إدارتنا على الاستدامة والمساواة بين الجنسين والتوفيق بين العمل والحياة ودعم الاقتصاد المحلي وتقليل التأثير البيئي باستخدام تقنيات خاصة للكفاءة الطاقية.',
+    'Nuestra gestión se centra en la sostenibilidad, la igualdad de género, la conciliación laboral, el apoyo a la economía local y la reducción del impacto ambiental, utilizando tecnología específica para la eficiencia energética.': 'تركز إدارتنا على الاستدامة والمساواة بين الجنسين والتوفيق بين العمل والحياة ودعم الاقتصاد المحلي وتقليل التأثير البيئي باستخدام تقنيات خاصة للكفاءة الطاقية.',
     'El Turismo como Diplomacia': 'السياحة كدبلوماسية',
-    'Creemos que nuestra voz puede enriquecer este foro desde la perspectiva de quienes conocen el turismo en su realidad más humana y cotidiana. El turismo es، en esencia، la forma más auténtica de diplomacia.': 'نعتقد أن صوتنا يمكن أن يثري هذا المنتدى من منظور من يعرف السياحة في واقعها الإنساني واليومي. السياحة هي في جوهرها أكثر أشكال الدبلوماسية أصالة.',
+    'Creemos que nuestra voz puede enriquecer este foro desde la perspectiva de quienes conocen el turismo en su realidad más humana y cotidiana. El turismo es, en esencia, la forma más auténtica de diplomacia.': 'نعتقد أن صوتنا يمكن أن يثري هذا المنتدى من منظور من يعرفون السياحة في واقعها الإنساني واليومي. السياحة هي في جوهرها أكثر أشكال الدبلوماسية أصالة.',
     '¿Por qué elegirnos?': 'لماذا تختارنا؟',
     'Elegirnos es apostar por un modelo inclusivo y sostenible.': 'اختيارنا هو الرهان على نموذج شامل ومستدام.',
     'Liderazgo femenino y diversidad en todo el proyecto.': 'قيادة نسائية وتنوع في جميع جوانب المشروع.',
@@ -586,7 +586,7 @@ const translations = {
     'Nuestro compromiso ambiental se mide con hechos y certificaciones.': 'يتم قياس التزامنا البيئي بالأفعال والشهادات.',
     'Sistema de gestión ambiental ISO 14001.': 'نظام إدارة بيئية ISO 14001.',
     'Huella de carbono un 70 % inferior a la media 4★.': 'بصمة كربونية أقل بنسبة 70٪ من متوسط الفنادق ذات الأربع نجوم.',
-    'Eficiencia energética، reducción de plásticos y movilidad sostenible.': 'كفاءة الطاقة، تقليل البلاستيك والتنقل المستدام.',
+    'Eficiencia energética, reducción de plásticos y movilidad sostenible.': 'كفاءة الطاقة، تقليل البلاستيك والتنقل المستدام.',
     'Alineación con los Objetivos de Desarrollo Sostenible (ODS).': 'الالتزام بأهداف التنمية المستدامة (SDGs).',
     'ODS prioritarios (2023–2028)': 'الأهداف ذات الأولوية (2023–2028)',
     'Basamos nuestra estrategia en los ODS de Naciones Unidas. Estos son los prioritarios a corto y medio plazo y cómo actuamos en cada uno.': 'نحن نبني استراتيجيتنا على أهداف الأمم المتحدة للتنمية المستدامة. هذه هي الأولويات على المدى القصير والمتوسط وكيف نتصرف في كل منها.',
@@ -597,7 +597,7 @@ const translations = {
     'Turismo Responsable': 'السياحة المسؤولة',
     'Proponemos un turismo responsable con consejos prácticos para visitantes:': 'نقترح سياحة مسؤولة مع نصائح عملية للزوار:',
     'Planifica con antelación para evitar imprevistos.': 'خطط مسبقاً لتجنب المفاجآت.',
-    'Transporte público، bici o caminar cuando sea viable.': 'استخدم وسائل النقل العامة أو الدراجة أو المشي عندما يكون ذلك ممكناً.',
+    'Transporte público, bici o caminar cuando sea viable.': 'استخدم وسائل النقل العامة أو الدراجة أو المشي عندما يكون ذلك ممكناً.',
     'Alojamientos sostenibles y herramientas digitales.': 'إقامة مستدامة وأدوات رقمية.',
     'No derroches agua ni energía; cuida la naturaleza.': 'لا تهدر الماء أو الطاقة؛ اعتنِ بالطبيعة.',
     'Compra local y minimiza residuos reutilizando.': 'اشترِ محلياً وقلل النفايات بإعادة الاستخدام.',
@@ -618,12 +618,12 @@ const translations = {
     // ODS radial items
     'Casa Alberola apuesta por la igualdad de género: gran parte de la dirección está formada por mujeres. Apostamos por la conciliación familiar y ajustamos los horarios a todos los miembros del equipo.': 'كازا ألبيرولا تدعم المساواة بين الجنسين: معظم الإدارة من النساء. نحن ندعم التوفيق بين العمل والأسرة ونضبط الجداول الزمنية لجميع أعضاء الفريق.',
     'Desde 2019 apostamos por eficiencia energética: instalaciones con aerotermia, limitadores de aire acondicionado y calefacción, y formación al equipo.': 'منذ عام 2019، نركز على كفاءة الطاقة: منشآت بتقنية الهواء الحراري، محددات التكييف والتدفئة، وتدريب الفريق.',
-    'Fomentamos el bienestar laboral: beneficios especiales، descuentos en hoteles، comidas de equipo e incentivos para todos los trabajadores.': 'نحن نشجع الرفاهية في العمل: مزايا خاصة، خصومات في الفنادق، وجبات جماعية وحوافز لجميع الموظفين.',
+    'Fomentamos el bienestar laboral: beneficios especiales, descuentos en hoteles, comidas de equipo e incentivos para todos los trabajadores.': 'نحن نشجع الرفاهية في العمل: مزايا خاصة، خصومات في الفنادق، وجبات جماعية وحوافز لجميع الموظفين.',
     'Más del 90% del equipo son mujeres y es multicultural.': 'أكثر من 90٪ من الفريق من النساء وهو متعدد الثقافات.',
-    'Cuidamos Alicante y fomentamos transporte sostenible: uso de bicicletas، transporte público y recorridos a pie. Potenciamos el aspecto cultural de la ciudad y provincia.': 'نهتم بأليكانتي ونعزز النقل المستدام: استخدام الدراجات، النقل العام والمشي. نعزز الجانب الثقافي للمدينة والمقاطعة.',
+    'Cuidamos Alicante y fomentamos transporte sostenible: uso de bicicletas, transporte público y recorridos a pie. Potenciamos el aspecto cultural de la ciudad y provincia.': 'نهتم بأليكانتي ونعزز النقل المستدام: استخدام الدراجات، النقل العام والمشي. نعزز الجانب الثقافي للمدينة والمقاطعة.',
     'Ejemplo de producción y consumo responsable: platos de elaboración al momento para evitar desperdicio y uso de "Too Good To Go" para reducirlo aún más.': 'مثال على الإنتاج والاستهلاك المسؤول: أطباق تُحضّر عند الطلب لتجنب الهدر واستخدام "تو جود تو جو" لتقليله أكثر.',
     'Calculamos nuestra huella de carbono para ser conscientes del impacto en el ecosistema y trabajamos para reducirla.': 'نحسب بصمتنا الكربونية لندرك تأثيرنا على النظام البيئي ونعمل على تقليلها.',
-    'Proteger los océanos es prioridad: ayudamos en el cuidado y formamos parte de una región con el mayor número de banderas azules por la calidad del الماء.': 'حماية المحيطات أولوية: نساعد في العناية وننتمي إلى منطقة بها أكبر عدد من الأعلام الزرقاء لجودة المياه.',
+    'Proteger los océanos es prioridad: ayudamos en el cuidado y formamos parte de una región con el mayor número de banderas azules por la calidad del agua.': 'حماية المحيطات أولوية: نساعد في العناية وننتمي إلى منطقة بها أكبر عدد من الأعلام الزرقاء لجودة المياه.',
     'El cuidado de los ecosistemas es esencial: recomendamos siempre turismo sostenible con el menor impacto posible.': 'العناية بالنظم البيئية أمر أساسي: نوصي دائماً بالسياحة المستدامة بأقل تأثير ممكن.',
     'Buscamos proveedores y colaboramos con asociaciones locales que comparten nuestra filosofía para cumplir estos objetivos juntos.': 'نبحث عن موردين ونتعاون مع جمعيات محلية تشاركنا فلسفتنا لتحقيق هذه الأهداف معاً.'
   }
@@ -637,15 +637,17 @@ function translateCard(card, lang) {
   const t = translations[lang];
   // Deep clone card
   const c = JSON.parse(JSON.stringify(card));
-  // Always use the original image path from the Spanish card
-  if (card.image) c.image = card.image;
-  if (c.title && t[c.title]) c.title = t[c.title];
+  if (c.title) c.title = t[c.title] || c.title;
   if (c.paragraphs) c.paragraphs = c.paragraphs.map(p => t[p] || p);
-  if (c.list) c.list = c.list.map(l => t[l] || l);
-  if (c.valores) c.valores = c.valores.map(v => t[v] || v);
-  if (c.team) c.team = c.team.map(v => t[v] || v);
-  if (c.gallery) c.gallery = c.gallery.map(g => t[g] || g);
-  if (c.radial) c.radial = c.radial.map(r => t[r] || r);
+  if (c.list) c.list = c.list.map(li => ({ ...li, text: t[li.text] || t[li.text.replace(/،/g,',')] || li.text }));
+  if (c.valores) c.valores = c.valores.map(v => ({ ...v, heading: t[v.heading] || v.heading, text: t[v.text] || v.text }));
+  if (c.team) c.team = c.team.map(m => ({ ...m, role: t[m.role] || m.role, name: t[m.name] || m.name }));
+  if (c.gallery) c.gallery = c.gallery.map(g => ({
+    ...g,
+    section: t[g.section] || g.section,
+    images: g.images.map(im => ({ ...im, title: t[im.title] || im.title }))
+  }));
+  if (c.radial) c.radial = c.radial.map(r => ({ ...r, title: t[r.title] || r.title }));
   return c;
 }
 
@@ -745,8 +747,8 @@ function renderCard(i, overrideCard) {
           <div class="valor-img-wrap">
             <img src="${val.img}" alt="${val.heading}" class="valor-img" />
           </div>
-          <h3 class="valor-heading">${val.heading}</h3>
-          <p class="valor-text">${val.text}</p>
+          <h3 class="valor-heading">${translations[currentLang][val.heading] || val.heading}</h3>
+          <p class="valor-text">${translations[currentLang][val.text] || val.text}</p>
         </div>
       `;
     });
@@ -754,16 +756,16 @@ function renderCard(i, overrideCard) {
   } else if (c.team) {
     // Special layout for "They say it" card
     html += `<div class="valores-wrap">`;
-    html += `<h2 style="text-align:center; font-size:2.2rem; margin-bottom:2rem; color:var(--gold); font-family:'Playfair Display',serif;">${c.title}</h2>`;
+    html += `<h2 style="text-align:center; font-size:2.2rem; margin-bottom:2rem; color:var(--gold); font-family:'Playfair Display',serif;">${translations[currentLang][c.title] || c.title}</h2>`;
     html += '<div class="valores-grid valores-grid-horizontal">';
     c.team.forEach(member => {
       html += `
         <div class="valor-card">
           <div class="valor-img-wrap">
-            <img src="${member.img}" alt="${member.name}" class="valor-img" />
+            <img src="${member.img}" alt="${translations[currentLang][member.name] || member.name}" class="valor-img" />
           </div>
-          <h3 class="valor-heading">${member.role}</h3>
-          <p class="valor-text">${member.name}</p>
+          <h3 class="valor-heading">${translations[currentLang][member.role] || member.role}</h3>
+          <p class="valor-text">${translations[currentLang][member.name] || member.name}</p>
         </div>
       `;
     });
@@ -771,13 +773,12 @@ function renderCard(i, overrideCard) {
   } else if (c.gallery) {
     // Special layout for gallery card
     html += `<div class="gallery-wrap gallery-scrollable">`;
-    html += `<h2 style="text-align:center; font-size:2.2rem; margin-bottom:2rem; color:var(--gold); font-family:'Playfair Display',serif;">${c.title}</h2>`;
+    html += `<h2 style="text-align:center; font-size:2.2rem; margin-bottom:2rem; color:var(--gold); font-family:'Playfair Display',serif;">${translations[currentLang][c.title] || c.title}</h2>`;
     c.gallery.forEach(section => {
       html += `<div class="gallery-section">`;
-      html += `<h3 class="gallery-section-title">${section.section}</h3>`;
+      html += `<h3 class="gallery-section-title">${translations[currentLang][section.section] || section.section}</h3>`;
       html += `<div class="gallery-row">`;
       section.images.forEach((imgObj, idx) => {
-        // For 'Alicante imprescindible' and 'Playas de Bandera Azul' sections, apply consistent style to all images
         let style = '';
         if (section.section === 'Alicante imprescindible' || section.section === 'Playas de Bandera Azul') {
           style = 'object-fit:cover;aspect-ratio:1.5/1;';
@@ -786,8 +787,8 @@ function renderCard(i, overrideCard) {
         }
         html += `
           <div class="gallery-img-wrap">
-            <img src="${imgObj.src}" alt="${imgObj.title}" class="gallery-img" style="${style}" />
-            <div class="gallery-img-title">${imgObj.title}</div>
+            <img src="${imgObj.src}" alt="${translations[currentLang][imgObj.title] || imgObj.title}" class="gallery-img" style="${style}" />
+            <div class="gallery-img-title">${translations[currentLang][imgObj.title] || imgObj.title}</div>
           </div>
         `;
       });
@@ -798,14 +799,14 @@ function renderCard(i, overrideCard) {
   } else {
     html += '<div class="card-flex">';
     html += '<div class="text-column">';
-    html += `<h2>${c.title}</h2>`;
+    html += `<h2>${translations[currentLang][c.title] || c.title}</h2>`;
     (c.paragraphs || []).forEach(p => {
-      html += `<p>${p}</p>`;
+      html += `<p>${translations[currentLang][p] || p}</p>`;
     });
     if (c.list && c.list.length) {
       html += '<ul class="icon-list">';
       c.list.forEach(it => {
-        html += `<li><i class="fa-solid fa-${it.icon}"></i><span>${it.text}</span></li>`;
+        html += `<li><i class="fa-solid fa-${it.icon}"></i><span>${translations[currentLang][it.text] || it.text}</span></li>`;
       });
       html += '</ul>';
     }
@@ -819,34 +820,31 @@ function renderCard(i, overrideCard) {
                  onerror="this.outerHTML='<div class=\'cube\'>${it.num}</div>'">`
           : `<div class="cube">${it.num}</div>`;
         html += `
-          <div class="radial-item" data-desc="${it.title}">
+          <div class="radial-item" data-desc="${translations[currentLang][it.title] || it.title}">
             ${imgOrCube}
-            <div class="label">${it.title}</div>
+            <div class="label">${translations[currentLang][it.title] || it.title}</div>
           </div>`;
       });
-      // Add info box in center, no ODS circle
       html += `<div class="radial-info" style="display:none;"></div>`;
       html += `</div></div>`;
     } else if (c.chartjs) {
       html += '<div class="chart-container"><canvas id="chartjs-canvas"></canvas></div>';
       if (c.chartjs.custom && typeof c.chartjs.custom.casaIdx === 'number') {
         html += `<div style="text-align:center;margin-top:8px;font-size:1.08rem;color:var(--gold);font-family:'Playfair Display',serif;">
-          <span style="font-weight:700;">${c.chartjs.custom.casaLabel}</span>: <span style="color:var(--text);font-weight:600;">${c.chartjs.custom.casaValue} kgCO₂eq/hab ocup</span>
+          <span style="font-weight:700;">${translations[currentLang][c.chartjs.custom.casaLabel] || c.chartjs.custom.casaLabel}</span>: <span style="color:var(--text);font-weight:600;">${c.chartjs.custom.casaValue} kgCO₂eq/hab ocup</span>
         </div>`;
       }
     } else if (c.alt) {
-      // Use custom images for specific cards
       let imgSrc = '';
-      if (c.title === 'Turismo Responsable') {
+      if (c.title === 'Turismo Responsable' || c.title === translations['es']['Turismo Responsable']) {
         imgSrc = 'Turismo.jpeg';
-      } else if (c.title === 'Alicante: modelo de ciudad') {
+      } else if (c.title === 'Alicante: modelo de ciudad' || c.title === translations['es']['Alicante: modelo de ciudad']) {
         imgSrc = 'AlicanteCentro.jpg';
       } else {
         imgSrc = 'AlicanteCentro.jpg';
       }
-      html += `<img class="card-img" src="${imgSrc}" alt="${c.alt}">`;
+      html += `<img class="card-img" src="${imgSrc}" alt="${translations[currentLang][c.alt] || c.alt}">`;
     }
-    // Remove duplicate image for Turismo Responsable and Alicante: modelo de ciudad
     let imgSrc = c.image;
     if (c.title === 'Alicante: modelo de ciudad' || c.title === translations['es']['Alicante: modelo de ciudad']) {
       imgSrc = 'AlicanteCentro.jpg';
@@ -854,9 +852,8 @@ function renderCard(i, overrideCard) {
     if (c.title === 'Turismo Responsable' || c.title === translations['es']['Turismo Responsable']) {
       imgSrc = 'Turismo.jpeg';
     }
-    // Only add image if not already added above
     if (!c.alt && imgSrc) {
-      html += `<img src="${imgSrc}" alt="${c.title}" class="card-img">`;
+      html += `<img src="${imgSrc}" alt="${translations[currentLang][c.title] || c.title}" class="card-img">`;
     }
     html += '</div>';
     html += '</div>';
